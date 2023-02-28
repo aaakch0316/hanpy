@@ -18,7 +18,7 @@ export default function Home() {
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
+            <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
             <a
@@ -40,8 +40,8 @@ export default function Home() {
         </div>
 
         <div className={styles.center}>
-          강창현 ci/cd TEST
-          <div className={styles.thirteen}>ci/cd</div>
+          <h1>강창현.js</h1>
+          <div className={styles.thirteen}>CI/CD</div>
         </div>
 
         <div className={styles.grid}>
