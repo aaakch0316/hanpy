@@ -32,10 +32,14 @@
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4vh;
 }
 
 .figure .txt p:nth-of-type(1) {
-  margin-top: 16vh;
+  /* margin-top: 19vh; */
 
   font: normal 2.5vw/1 "Roboto";
   /* word-spacing: -20px; */
@@ -68,7 +72,7 @@
 
 .figure .txt .phone_txt p:nth-of-type(1) {
   /* font: normal 8vw/1 "Nunito"; */
-  margin-top: 22vh;
+  /* margin-top: 22vh; */
 
   font: normal 25px/1 "Roboto";
   /* word-spacing: -20px; */
