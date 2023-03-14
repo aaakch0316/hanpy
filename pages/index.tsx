@@ -9,7 +9,7 @@ export default function Home() {
   const [video, setVideo] = useState(<video />);
   const router = useRouter();
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     router.push("/login");
   };
