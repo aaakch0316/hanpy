@@ -1,6 +1,36 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import Github from "@/service/github";
+import "@/styles/globals.css";
+import axios from "axios";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { ChakraProvider } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+
+const colors = {
+  brand: {
+    900: "#1a365d",
+    800: "#153e75",
+    700: "#2a69ac",
+  },
+};
+const theme = extendTheme({ colors });
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const httpClient = axios.create({
+    baseURL: "https://api.github.com",
+  });
+
+  const github = new Github(httpClient);
+
+  return (
+    <>
+      <Head>
+        <title>Welcome to Black-Hole </title>
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} github={github} />
+      </ChakraProvider>
+    </>
+  );
 }
