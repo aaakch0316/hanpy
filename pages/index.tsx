@@ -11,7 +11,8 @@ export default function Home() {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    router.push("/login");
+    router.push("/education");
+    // router.push("/login");
   };
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Home() {
         poster="./images/main_fullscreen/preloading.jpg"
       >
         <source src="./videos/moon-home.mp4" type="video/mp4" />
-        <img src="./images/main_fullscreen/preloading.jpg" alt="preloading" />
+        {/* <img src="./images/main_fullscreen/preloading.jpg" alt="preloading" /> */}
       </video>
     );
   }, []);

@@ -19,6 +19,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "service/github.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "service/github.js",
+    "hooks/useSpeechSynthesis.js"
+  ],
   "exclude": ["node_modules"]
 }
