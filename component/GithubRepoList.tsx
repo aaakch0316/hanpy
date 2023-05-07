@@ -22,7 +22,7 @@ const GithubRepoList = ({ email }: GithubRepoListProps) => {
     <>
       <h2>{email}</h2>
       <div>
-        {data?.map((repo) => (
+        {data?.map((repo: any) => (
           <div key={repo.id}>
             <p>PJ name : {repo.name}</p>
             <p>html_url : {repo.html_url}</p>
