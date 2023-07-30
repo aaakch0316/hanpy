@@ -26,8 +26,8 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import Image from "next/image";
 import Logo from "public/education/hanpy_computer.jpeg";
+import IncheonAirport from "public/images/resume/incheon-airport.jpg";
 
 import { MdCheckCircle } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
@@ -37,6 +37,7 @@ import { MdHomeWork } from "react-icons/md";
 import { GrGamepad } from "react-icons/gr";
 // import { ExternalLinkIcon } from "react-icons/ex";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -64,10 +65,14 @@ export default function About() {
           <Spacer p={1} />
           <hr />
           <Box>
+            <Spacer p={1} />
             <Badge variant="outline" colorScheme="green">
               사용자와 가장 가까이서
             </Badge>{" "}
-            비즈니스 가치를 창출함에 가치를 두고있는 웹개발자 입니다.{" "}
+            비즈니스 가치를 창출함에 가치를 두고있는 웹개발자 입니다. 다양한
+            업무를 통한 장점도 있지만, Frontend만 공부 하신분들 보다는 부족한
+            부분이 있다고 생각합니다. 하지만, 회사의 상황에 따라 빠르게
+            개발하면서 재사용 가능한 코드에 대해 오늘도 고민하고 있습니다.
           </Box>
           {/* <Box>
           개발자란 MAKER라고 생각합니다. MAKER로서의 가치는 비즈니스 가치를
@@ -107,7 +112,7 @@ export default function About() {
                 </Tr>
                 <Tr>
                   <Th>projects</Th>
-                  <Td> Web SDK / SaaS 서비스 개발 / Solution 설치</Td>
+                  <Td> Web SDK / SaaS 서비스 개발 / Solution 개발</Td>
                 </Tr>
                 <Tr>
                   <Th>tech</Th>
@@ -116,6 +121,64 @@ export default function About() {
               </Tbody>
             </Table>
           </TableContainer>
+          <Spacer p={3} />
+          <Heading as="h4" size="sm" noOfLines={1}>
+            [B2B] 인천국제공항공사 Kiosk (web) (2023.07)
+          </Heading>
+          <Spacer p={1} />
+          <Text fontSize="sm" pl={3} color="gray.500">
+            PoC 프로젝트로 현재 인천공항에서 테스트 가능(2023.08~2023.10)
+          </Text>
+          <hr />
+
+          <Flex align="center" gap="1">
+            <List spacing={1} p={2}>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                PoC는 html/css/JavaScript 하나씩 만드는 요구사항으로 있어
+                JavaScript Module 시스템을 사용하지 않고 제작
+              </ListItem>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                Azure STT, Tensorflow 비전 인식, ChatGPT, unity 길 안내, 항공
+                API를 적용하여 사용자와 대화 가능한 가상 인간 Kiosk 제작 (ibm
+                챗봇은 외부 업채)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                전역 객체를 공유하는데 한계가 있어, 공통으로 사용되는 State들은
+                Observer 패턴의 상태관리 적용하여 UI 변경
+              </ListItem>
+            </List>
+            <Image
+              src={IncheonAirport}
+              alt="hanpy logo"
+              width={140}
+              height={200}
+              unoptimized
+              style={{ margin: "10px", borderRadius: "3px" }}
+            />{" "}
+          </Flex>
+
+          <Spacer p={3} />
+          <Heading as="h4" size="sm" noOfLines={1}>
+            [B2B] KB국민은행 인공인간 금융비서 프로젝트 (2023.6)
+          </Heading>
+          <List spacing={1} p={2}>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              제공한 Web SDK를 적용하는 과정에서, Background에서 Forground
+              진입시 IOS 음성/MOV 제어 이슈로 Brige 함수 제공
+            </ListItem>
+            {/* <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              제공한 Web SDK에서 IOS 에 따른 이슈 해결
+            </ListItem> */}
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              폐쇄망 내부 환경에 맞게 Web 서비스 환경 재구성 및 DockerFile 제공
+            </ListItem>
+          </List>
           <Spacer p={3} />
           <Flex align="center" gap="1">
             <Heading as="h4" size="sm" noOfLines={1}>
@@ -214,7 +277,7 @@ export default function About() {
               STT(Azure) 결합 된 vanilla javascript 제작/제공
             </ListItem>
           </List>
-          <Spacer p={3} />
+          {/* <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] 국정원 딥페이크 탐지 (2022.11~ 1차 완료. 2차 고도화 진행 중)
           </Heading>
@@ -227,8 +290,8 @@ export default function About() {
               <ListIcon as={MdCheckCircle} color="green.500" />
               내부 설치
             </ListItem>
-          </List>
-          <Spacer p={3} />
+          </List> */}
+          {/* <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] KB국민은행 인공인간 프로젝트 (2022.10~ 2차 완료. 3차 고도화
             진행 중)
@@ -242,7 +305,7 @@ export default function About() {
               <ListIcon as={MdCheckCircle} color="green.500" />
               Web SDK 수정 제공
             </ListItem>
-          </List>
+          </List> */}
           <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] 농협은행 가상인간 고도화 사업 (2022.9~ 1차 완료. 2차 고도화
@@ -282,7 +345,7 @@ export default function About() {
               카운터에서 AI-human 발화를 통제 가능한, Web socket POC 개발
             </ListItem>
           </List>
-          <Spacer p={3} />
+          {/* <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] 인천국제공항공사 (2023.05~)
           </Heading>
@@ -292,7 +355,7 @@ export default function About() {
               자사 Unity 3D Human 키오스크 Web 구현 (인천국제공항공사 길안내
               AI-Human)
             </ListItem>
-          </List>
+          </List> */}
           <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [예정] 신한은행 (2023.06~)
@@ -326,8 +389,7 @@ export default function About() {
           </Flex>
           <Spacer p={1} />
           <Text fontSize="lg">
-            4명이서 시작한 스타트업으로, 회사 생존을 위한 SI 프로젝트를 주로
-            진행
+            4명이서 시작한 스타트업으로, SI 프로젝트를 주로 진행
           </Text>
           <Spacer p={2} />
           <TableContainer>
@@ -373,6 +435,17 @@ export default function About() {
           </Flex>
           <Spacer p={1} />
           <List spacing={1} p={2}>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <b>
+                <Badge variant="outline" colorScheme="blue">
+                  React
+                </Badge>{" "}
+                를 처음 시작한 프로젝트로, 사용자와 가까이서 서비스를 제공한다는
+                것에 흥미를 느껴 Frontend 직군을 시작하기로 하기로 마음 먹은
+                프로젝트
+              </b>
+            </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
               기획을 보고, front(react) / backend(express) / MySQL / AWS EC2
