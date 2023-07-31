@@ -26,7 +26,7 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import Logo from "public/education/hanpy_computer.jpeg";
+import HanpyLog from "public/education/hanpy_computer.jpeg";
 import IncheonAirport from "public/images/resume/incheon-airport.jpg";
 
 import { MdCheckCircle } from "react-icons/md";
@@ -52,11 +52,12 @@ export default function About() {
         <Container>
           <Flex align="center" gap="1">
             <Image
-              src={Logo}
+              src={HanpyLog}
               alt="hanpy logo"
               width={65}
-              unoptimized
               height={40}
+              placeholder="blur"
+              unoptimized
             />
             <Heading as="h1" noOfLines={1}>
               강창현
@@ -69,10 +70,8 @@ export default function About() {
             <Badge variant="outline" colorScheme="green">
               사용자와 가장 가까이서
             </Badge>{" "}
-            비즈니스 가치를 창출함에 가치를 두고있는 웹개발자 입니다. 다양한
-            업무를 통한 장점도 있지만, Frontend만 공부 하신분들 보다는 부족한
-            부분이 있다고 생각합니다. 하지만, 회사의 상황에 따라 빠르게
-            개발하면서 재사용 가능한 코드에 대해 오늘도 고민하고 있습니다.
+            비즈니스 가치를 창출함에 가치를 두고있는 2년 차 웹개발자입니다.
+            미래에 대한 고민보다는, 오늘보다 발전한 내일을 위해 고민합니다.
           </Box>
           {/* <Box>
           개발자란 MAKER라고 생각합니다. MAKER로서의 가치는 비즈니스 가치를
@@ -116,12 +115,12 @@ export default function About() {
                 </Tr>
                 <Tr>
                   <Th>tech</Th>
-                  <Td>javascript nodejs </Td>
+                  <Td>Reactjs / Nextjs / JavaScript / 자동화 배포</Td>
                 </Tr>
               </Tbody>
             </Table>
           </TableContainer>
-          <Spacer p={3} />
+          <Spacer p={5} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] 인천국제공항공사 Kiosk (web) (2023.07)
           </Heading>
@@ -135,7 +134,7 @@ export default function About() {
             <List spacing={1} p={2}>
               <ListItem>
                 <ListIcon as={MdCheckCircle} color="green.500" />
-                PoC는 html/css/JavaScript 하나씩 만드는 요구사항으로 있어
+                요구사항으로 html/css/JavaScript를 파일 하나씩 만들어서,
                 JavaScript Module 시스템을 사용하지 않고 제작
               </ListItem>
               <ListItem>
@@ -156,6 +155,8 @@ export default function About() {
               width={140}
               height={200}
               unoptimized
+              // loading="lazy"
+              placeholder="blur"
               style={{ margin: "10px", borderRadius: "3px" }}
             />{" "}
           </Flex>
@@ -176,13 +177,14 @@ export default function About() {
             </ListItem> */}
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              폐쇄망 내부 환경에 맞게 Web 서비스 환경 재구성 및 DockerFile 제공
+              폐쇄망 내부 환경에 맞게 Web 서비스 환경(Nextjs) 재구성 및
+              DockerFile 제공
             </ListItem>
           </List>
           <Spacer p={3} />
           <Flex align="center" gap="1">
             <Heading as="h4" size="sm" noOfLines={1}>
-              Web SDK (2022.12~)
+              Web SDK 최적화 (2022.12~2023.06)
             </Heading>
             <Link href="https://docs.deepbrain.io/aihuman/web-sdk">
               <ExternalLinkIcon mx="2px" />
@@ -206,21 +208,21 @@ export default function About() {
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              SDK 토큰 인증 설계/개발 (appId / userKey 발급 고도화)
+              [API 서버] SDK 토큰 인증 설계/개발 (appId / userKey 발급 고도화)
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              기존 하드코딩된 자사 SDK 서비스에 동일한 인증을 적용
+              사용량 측정을 위해, 하드코딩된 자사 SDK 서비스에 동일한 인증을
+              적용
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
               SDK 인증 서버를 통해, Web/IOS/Wnd/And 플랫폼에 필요한 API 제공
-            </ListItem>
+            </ListItem> */}
           </List>
           <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
-            유니콘 투자유치를 위한, 실시간 고속 합성 Web SDK 연구/개발
-            (2023.01~)
+            실시간 고속 합성 Web SDK 연구/개발 (2023.01~2023.02)
           </Heading>
           <Spacer p={1} />
           <Text fontSize="sm" pl={3} color="gray.500">
@@ -299,7 +301,7 @@ export default function About() {
           <List spacing={1} p={2}>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              폐쇄망 내부 환경에 맞게 Web 서비스 환경 재구성 / 설치
+              폐쇄망 내부 환경에 맞게 Web 서비스 환경 재구성 및 DockerFile 제공
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
@@ -308,13 +310,13 @@ export default function About() {
           </List> */}
           <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
-            [B2B] 농협은행 가상인간 고도화 사업 (2022.9~ 1차 완료. 2차 고도화
-            진행 중)
+            [B2B] 농협은행 가상인간 고도화 사업 (2022.09~2022.11)
           </Heading>
           <List spacing={1} p={2}>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              폐쇄망 내부 환경에 맞게 Web 서비스 환경 재구성 / 설치
+              폐쇄망 내부 환경에 맞게 Web 서비스 환경(Nextjs) 재구성 및
+              DockerFile 제공
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
@@ -322,7 +324,7 @@ export default function About() {
             </ListItem>
           </List>
           <Spacer p={3} />
-          <Heading as="h4" size="sm" noOfLines={1}>
+          {/* <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] BMW 개발 지원(2022.12)
           </Heading>
           <List spacing={1} p={2}>
@@ -344,7 +346,7 @@ export default function About() {
               <ListIcon as={MdCheckCircle} color="green.500" />
               카운터에서 AI-human 발화를 통제 가능한, Web socket POC 개발
             </ListItem>
-          </List>
+          </List> */}
           {/* <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [B2B] 인천국제공항공사 (2023.05~)
@@ -356,7 +358,7 @@ export default function About() {
               AI-Human)
             </ListItem>
           </List> */}
-          <Spacer p={3} />
+          {/* <Spacer p={3} />
           <Heading as="h4" size="sm" noOfLines={1}>
             [예정] 신한은행 (2023.06~)
           </Heading>
@@ -375,7 +377,7 @@ export default function About() {
               <ListIcon as={MdCheckCircle} color="green.500" />
               [개인 목표] yarn zero install 적용
             </ListItem>
-          </List>
+          </List> */}
           <Spacer p={3} />
         </Container>
         <Container>
@@ -415,7 +417,7 @@ export default function About() {
             </Table>
           </TableContainer>
           <Spacer p={3} />
-          <Flex align="center" gap="1">
+          {/* <Flex align="center" gap="1">
             <Heading as="h4" size="sm" noOfLines={1}>
               세븐파트너스 입찰/낙찰 통합 구축 시스템 (2023.02~03)
             </Heading>
@@ -427,7 +429,7 @@ export default function About() {
               공공기간 정보 크롤링하고, DB 적재
             </ListItem>
           </List>
-          <Spacer p={3} />
+          <Spacer p={3} /> */}
           <Flex align="center" gap="1">
             <Heading as="h4" size="sm" noOfLines={1}>
               대우건설 하자관리 시스템 (2022.01~03)
@@ -501,30 +503,29 @@ export default function About() {
           </Heading>
           <Spacer p={1} />
           <Text fontSize="sm" pl={3} color="gray.500">
-            강사경력 / 외주경력 / 교육
+            {/* 강사경력 / 외주경력 / 교육 */}
+            지식 공유를 통해 함께 성장하고 싶습니다. 블로그를 꾸준히 작성하고
+            있으며, 휴식기에는 강사활동을 통한 지식 공유를 즐깁니다.
           </Text>
           <Spacer p={3} />
           <Flex align="center" gap="1">
-            <Icon as={BsPencil} w={8} h={8} color="blue.800" />
+            <Icon as={MdHomeWork} w={8} h={8} color="blue.800" />
             <Heading as="h2" noOfLines={1} size="md">
-              Teaching career
+              Outsourcing
             </Heading>
           </Flex>
-
-          <List spacing={1} p={2}>
+          <List spacing={1}>
+            {/* <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              백화점 VIP 고객 차량인식 프로젝트 MVP제작 : PM 참여
+              (2023.01~2023.03){" "}
+            </ListItem> */}
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              [영우글로벌러닝] K-digital 데이터분석/코딩테스트 강사 (2021.03)
-            </ListItem>
-            <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
-              [홍익대학교] K-data 빅데이터 분석 기반 비즈니스 개발자 양성 및
-              취업과정 - 데이터 분석(Kaggle) 강사 (2022.06)
-            </ListItem>
-            <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
-              [렛유인] 로봇비전활용 엔지니어링 온라인 교육 강사 -
-              자료구조/알고리즘 (영상 제작 일정 : 2023.06~2023.07)
+              {/* 하루 방문자 수가 1000명 이상인{" "} */}
+              공부 및 지식 공유를 위한{" "}
+              <Badge colorScheme="green">블로그 운영</Badge> (하루 방문자 1000명
+              이상)
             </ListItem>
           </List>
           <Spacer p={3} />
@@ -558,30 +559,35 @@ export default function About() {
                 <ExternalLinkIcon mx="2px" />
               </Link>
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
               [예정] 자사 모노레포 적용을 위한, 프로젝트 분리
-            </ListItem>
+            </ListItem> */}
           </List>
           <Spacer p={3} />
 
           <Flex align="center" gap="1">
-            <Icon as={MdHomeWork} w={8} h={8} color="blue.800" />
+            <Icon as={BsPencil} w={8} h={8} color="blue.800" />
             <Heading as="h2" noOfLines={1} size="md">
-              Outsourcing
+              Teaching career
             </Heading>
           </Flex>
-          <List spacing={1}>
+
+          <List spacing={1} p={2}>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              백화점 VIP 고객 차량인식 프로젝트 MVP제작 : PM 참여
-              (2023.01~2023.03){" "}
+              [영우글로벌러닝] K-digital 데이터분석/코딩테스트 강사 (2021.03)
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
-              [블로그 전체 정리 예정]하루 방문자 수가 1000명 이상인{" "}
-              <Badge colorScheme="green">블로그 운영</Badge>
+              [홍익대학교] K-data 빅데이터 분석 기반 비즈니스 개발자 양성 및
+              취업과정 - 데이터 분석(Kaggle) 강사 (2022.06)
             </ListItem>
+            {/* <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              [렛유인] 로봇비전활용 엔지니어링 온라인 교육 강사 -
+              자료구조/알고리즘 (영상 제작 일정 : 2023.06~2023.07)
+            </ListItem> */}
           </List>
           <Spacer p={3} />
 
